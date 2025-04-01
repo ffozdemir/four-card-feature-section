@@ -112,3 +112,42 @@ main {
 .blue {
   border-top: 5px solid var(--color-primary-blue);
 }
+
+@media (min-width: 48rem) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, 1fr) 50px;
+    gap: 1rem;
+    max-width: 80rem;
+  }
+
+  .cards-header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .cards-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .cyan {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .blue {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+  }
+  .red {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  .orange {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+}
