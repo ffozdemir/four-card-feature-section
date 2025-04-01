@@ -10,8 +10,14 @@
   --color-neutral-grey-400: hsl(212, 6%, 44%);
   --color-neutral-white: hsl(0, 0%, 100%);
 
+  --color-background: rgba(243, 243, 231, 0.932);
+
   --font-family-body: "Poppins", sans-serif;
-  --font-size: 15px;
+  --font-size: 0.938rem;
+  --font-size-large: 1.5rem;
+  --font-weight-thin: 200;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
   --border-radius: 10px;
 }
 
@@ -19,4 +25,90 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size);
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 40rem;
+}
+
+.cards-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.cards-header h2 {
+  font-size: var(--font-size-large);
+}
+
+.cards-header span {
+  color: var(--color-neutral-grey-400);
+  font-weight: var(--font-weight-normal);
+}
+
+.card {
+  background-color: var(--color-neutral-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 30px 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card h2 {
+  font-size: var(--font-size-large);
+  color: var(--color-neutral-grey-500);
+  font-weight: var(--font-weight-bold);
+}
+
+.card p {
+  color: var(--color-neutral-grey-400);
+  font-weight: var(--font-weight-normal);
+}
+
+.card-image {
+  align-self: flex-end;
+  width: 20%;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+}
+
+.cyan {
+  border-top: 5px solid var(--color-primary-cyan);
+}
+.orange {
+  border-top: 5px solid var(--color-primary-orange);
+}
+.red {
+  border-top: 5px solid var(--color-primary-red);
+}
+.blue {
+  border-top: 5px solid var(--color-primary-blue);
 }
