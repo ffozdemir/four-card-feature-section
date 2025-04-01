@@ -5,12 +5,13 @@
   --color-primary-cyan: hsl(180, 62%, 55%);
   --color-primary-orange: hsl(34, 97%, 64%);
   --color-primary-blue: hsl(212, 86%, 64%);
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 
   --color-neutral-grey-500: hsl(234, 12%, 34%);
   --color-neutral-grey-400: hsl(212, 6%, 44%);
   --color-neutral-white: hsl(0, 0%, 100%);
 
-  --color-background: rgba(243, 243, 231, 0.932);
+  --color-background: hsla(60, 33%, 93%, 0.932);
 
   --font-family-body: "Poppins", sans-serif;
   --font-size: 0.938rem;
@@ -45,7 +46,6 @@ main {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  max-width: 40rem;
 }
 
 .cards-header {
@@ -58,7 +58,7 @@ main {
   padding: 10px;
 }
 
-.cards-header h2 {
+.cards-header h1 {
   font-size: var(--font-size-large);
 }
 
@@ -70,7 +70,7 @@ main {
 .card {
   background-color: var(--color-neutral-white);
   border-radius: var(--border-radius);
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 10px var(--box-shadow-color);
   padding: 30px 30px 40px;
   width: 100%;
   display: flex;
@@ -116,10 +116,14 @@ main {
 @media (min-width: 48rem) {
   main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(3, 1fr) 50px;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
-    max-width: 80rem;
+    margin-bottom: 5rem;
+  }
+
+  .card{
+   max-width: 25rem;
   }
 
   .cards-header {
@@ -128,7 +132,6 @@ main {
     max-width: 500px;
     margin: 0 auto;
   }
-
   .cards-header h1 {
     font-size: 1.8rem;
   }
